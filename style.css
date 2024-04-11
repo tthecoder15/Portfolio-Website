@@ -4,6 +4,48 @@
   box-sizing: border-box;
 }
 
+* h1,
+h2,
+p {
+  text-align: center;
+}
+
+* h1 {
+  font-size: 2em;
+  margin: 0.3em 0;
+}
+
+* h2 {
+  font-size: 1.5em;
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
+}
+
+* a {
+  text-decoration: none;
+  color: black;
+}
+
+* figcaption {
+  font-style: italic;
+  text-align: center;
+  padding-top: 0.5em;
+  margin: auto;
+}
+
+* img {
+  display: block;
+  margin: auto;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+* figure {
+  margin:0.5em 0;
+}
+
 /*-------------GRID-------------*/
 body {
   display: grid;
@@ -24,41 +66,18 @@ header a {
   height: 100%;
 }
 
-/*-------------BROAD ELEMENT STYLING-------------*/
+/*-------------ARTICLE STYLING-------------*/
 
-main,
+main p {
+  text-align: center;
+}
+
 article {
   margin: auto;
-  margin-bottom: 1em;
-  width: 60vw;
-  max-width: 400px;
+  width: 100%;
+  padding: 1em;
+  max-width: 700px;
   /* background-color: red; */
-}
-
-h1,
-h2,
-p {
-  text-align: center;
-}
-
-h1 {
-  font-size: 2em;
-  margin: 0.3em 0;
-}
-
-h2 {
-  font-size: 1.5em;
-  margin: 0.5em;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
-figcaption {
-  font-style: italic;
-  text-align: center;
 }
 
 /*-------------NAVBAR SETTINGS FOR EVERY PAGE-------------*/
@@ -92,6 +111,11 @@ figcaption {
 #blog-index-link {
   background: #5e99ff;
   grid-area: blog-index;
+}
+
+#download-resume-nav-link {
+  background: #FFFF70;
+  grid-area: download-resume;
 }
 
 /*-------------NAVBAR -> HOME PAGE-------------*/
@@ -132,12 +156,33 @@ figcaption {
     "about-me";
 }
 
+/*-------------NAVBAR -> ABOUT-ME-------------*/
+#about-me-nav {
+  display: grid;
+  grid-template-areas:
+    "download-resume"
+    "my-work"
+    "contact"
+    "blog-index";
+}
+
+/*-------------NAVBAR -> MY-WORK-------------*/
+#my-work-nav {
+  display: grid;
+  grid-template-areas:
+    "download-resume download-resume"
+    "contact contact"
+    "about-me blog-index";
+  grid-template-columns: 1fr 1fr;
+}
+
 /*-------------FOOTER-------------*/
 footer {
   background-color: #b8ff71;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  
 }
 
 .footer-link {
@@ -164,17 +209,22 @@ footer {
 }
 
 /*-------------BLOG-INDEX.HTML-------------*/
-.blog-index-container {
+#blog-index-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 2vh 0;
+  align-items: center;
+}
+
+.single-blog-container {
+  max-width: 400px;
+  margin: 1.5em 0;
   background-color: #5e99ff;
-  padding: 2vw;
+  padding: 1.5em;
   border-radius: 5%;
 }
 
-.blog-index-container h2,
+.single-blog-container h2,
 h3,
 p {
   margin: 0.2em 0;
@@ -189,11 +239,7 @@ p {
 }
 
 .blog-post img {
-  display: block;
-  margin: auto;
-  width: 50vw;
-  max-width: 400px;
-  background-color: red;
+  width: 80%;
 }
 
 .blog-post figcaption {
@@ -207,21 +253,37 @@ p {
   justify-content: center;
 }
 
-#about-me-article figcaption {
-  text-align: center;
-  margin: auto;
-  margin-top: 0.5em;
-}
-
 #about-me-article p {
     text-align: center;
 }
   
 
 #about-me-article img {
-  display: block;
-  margin: auto;
-  max-width: 400px;
-  width: 40vw;
+  width: 80%;
   border-radius: 50%;
 }
+
+/*-------------MY-WORK.HTML-------------*/
+.my-work-article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.my-work-article:nth-of-type(even) {
+  background-color: #fc5656;
+}
+
+.my-work-article img {
+  width: 95%;
+}
+
+.my-work-article h2, h3 {
+  text-align: center;
+  margin-left: 0
+}
+
+#band-website-vertical {
+  width: 70%;
+}
+
