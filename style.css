@@ -19,14 +19,15 @@ header {
 }
 
 header a {
-    padding: 2em 0;
-    width: 100%;
-    height: 100%;
+  padding: 1em 0;
+  width: 100%;
+  height: 100%;
 }
 
 /*-------------BROAD ELEMENT STYLING-------------*/
 
-main, article {
+main,
+article {
   margin: auto;
   margin-bottom: 1em;
   width: 60vw;
@@ -41,11 +42,12 @@ p {
 }
 
 h1 {
-  font-size: 2.5em;
-  margin: 0.5em 0;
+  font-size: 2em;
+  margin: 0.3em 0;
 }
 
 h2 {
+  font-size: 1.5em;
   margin: 0.5em;
 }
 
@@ -54,11 +56,16 @@ a {
   color: black;
 }
 
+figcaption {
+  font-style: italic;
+  text-align: center;
+}
+
 /*-------------NAVBAR SETTINGS FOR EVERY PAGE-------------*/
 .nav-bar-container {
-    text-align: center;
-    display: flex;
-    justify-content: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 .nav-bar-container a {
@@ -103,10 +110,27 @@ a {
   grid-template-areas:
     "my-work my-work"
     "about-me blog-index";
-grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
 }
 
+/*-------------NAVBAR -> BLOG-INDEX-------------*/
+#blog-index-page-nav {
+  display: grid;
+  grid-template-areas:
+    "my-work"
+    "contact"
+    "about-me";
+}
 
+/*-------------NAVBAR -> BLOG-POSTS-------------*/
+.blog-post-nav {
+  display: grid;
+  grid-template-areas:
+    "blog-index"
+    "my-work"
+    "contact"
+    "about-me";
+}
 
 /*-------------FOOTER-------------*/
 footer {
@@ -137,4 +161,67 @@ footer {
 
 #resume-link-button {
   background-color: #ffff70;
+}
+
+/*-------------BLOG-INDEX.HTML-------------*/
+.blog-index-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 2vh 0;
+  background-color: #5e99ff;
+  padding: 2vw;
+  border-radius: 5%;
+}
+
+.blog-index-container h2,
+h3,
+p {
+  margin: 0.2em 0;
+  text-align: left;
+}
+
+/*-------------BLOG-#.HTML-------------*/
+.blog-post {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.blog-post img {
+  display: block;
+  margin: auto;
+  width: 50vw;
+  max-width: 400px;
+  background-color: red;
+}
+
+.blog-post figcaption {
+  margin: 1em 0;
+}
+
+/*-------------ABOUT-ME.HTML-------------*/
+#about-me-article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#about-me-article figcaption {
+  text-align: center;
+  margin: auto;
+  margin-top: 0.5em;
+}
+
+#about-me-article p {
+    text-align: center;
+}
+  
+
+#about-me-article img {
+  display: block;
+  margin: auto;
+  max-width: 400px;
+  width: 40vw;
+  border-radius: 50%;
 }
