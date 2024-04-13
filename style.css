@@ -43,27 +43,59 @@ p {
 }
 
 * figure {
-  margin:0.5em 0;
+  margin-bottom:0.5em 0;
 }
 
-/*-------------GRID-------------*/
-body {
-  display: grid;
+/*-------------GRID SET-UP-------------*/
+* header {
+  grid-area: header;
+}
+
+* nav {
+  grid-area: nav;
+}
+
+* footer {
+  grid-area: footer;
+}
+
+* main {
+  grid-area: main;
 }
 
 /*-------------HEADER-------------*/
 header {
   text-align: center;
   background-color: #b8ff71;
-  margin-bottom: 1vh;
+  margin-bottom: 0rem;
   display: flex;
   justify-content: center;
 }
 
 header a {
-  padding: 1em 0;
+  padding: 1rem 0;
   width: 100%;
   height: 100%;
+}
+
+/*-------------FOOTER-------------*/
+footer {
+  background-color: #b8ff71;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.footer-link {
+  padding: 30px 0;
+  width: 90px;
+  margin: 10px;
+  text-align: center;
+  background-color: yellow;
+}
+
+#ws-extra-green {
+  background-color: #b8ff71;
 }
 
 /*-------------ARTICLE STYLING-------------*/
@@ -74,16 +106,16 @@ main p {
 
 article {
   margin: auto;
-  width: 100%;
+  width: 90%;
   padding: 1em;
-  max-width: 700px;
-  /* background-color: red; */
+  max-width: 550px;
 }
 
 /*-------------NAVBAR SETTINGS FOR EVERY PAGE-------------*/
 .nav-bar-container {
   text-align: center;
   display: flex;
+  align-items: center;
   justify-content: center;
 }
 
@@ -118,15 +150,6 @@ article {
   grid-area: download-resume;
 }
 
-/*-------------NAVBAR -> HOME PAGE-------------*/
-#home-page-nav {
-  display: grid;
-  grid-template-areas:
-    "my-work"
-    "contact"
-    "about-me"
-    "blog-index";
-}
 
 /*-------------NAVBAR -> CONTACT PAGE-------------*/
 #contact-page-nav {
@@ -176,21 +199,65 @@ article {
   grid-template-columns: 1fr 1fr;
 }
 
-/*-------------FOOTER-------------*/
-footer {
-  background-color: #b8ff71;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  
+/*-------------INDEX.HTML-------------*/
+#home-page-pic {
+  width: 30vw;
+  height: 30vw;
+  object-fit: cover;
+  object-position: 0 20%;
+  margin: auto
 }
 
-.footer-link {
-  padding: 30px 0;
-  width: 90px;
-  margin: 10px;
-  text-align: center;
-  background-color: yellow;
+#home-page-nav {
+  display: grid;
+  grid-template-areas:
+    "my-work"
+    "contact"
+    "about-me"
+    "blog-index";
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: 
+  "header"
+  "main"
+  "nav"
+  "footer"
+}
+
+@media screen and (min-width: 700px) { 
+    body {    
+    grid-template-columns: 1fr 3fr;
+    
+    grid-template-areas:
+    "header header"
+    "nav main"  
+    "footer footer"
+  }
+}
+
+@media screen and (min-width: 900px) and (min-height: 600px) and (min-aspect-ratio: 1.5/1) {
+  nav {
+    position: sticky;
+    align-self: start;
+    margin-top: 5vh;
+    top: 0
+    }
+
+    .nav-bar-container a {
+      padding: 7vh 0;
+    }  
+  
+    main {    
+    grid-template-columns: 1fr 3fr;
+
+    grid-template-areas:
+    "header header"
+    "nav main"  
+    "footer footer"
+  }
 }
 
 /*-------------CONTACT.HTML-------------*/
@@ -259,8 +326,10 @@ p {
   
 
 #about-me-article img {
-  width: 80%;
-  border-radius: 50%;
+  width: 30vh;
+  height: 30vh;
+  object-fit: cover;
+  object-position: 0 5%;
 }
 
 /*-------------MY-WORK.HTML-------------*/
