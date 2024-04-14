@@ -2,6 +2,7 @@
   margin: 0;
   border: 0;
   box-sizing: border-box;
+
 }
 
 * h1,
@@ -10,15 +11,19 @@ p {
   text-align: center;
 }
 
+main p {
+  text-align: center;
+}
+
 * h1 {
-  font-size: 2em;
+  font-size: 2rem;
   margin: 0.3em 0;
 }
 
 * h2 {
-  font-size: 1.5em;
-  margin-top: 0.3em;
-  margin-bottom: 0.3em;
+  font-size: 1.5rem;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
 }
 
 * a {
@@ -29,7 +34,7 @@ p {
 * figcaption {
   font-style: italic;
   text-align: center;
-  padding-top: 0.5em;
+  padding-top: 0.5rem;
   margin: auto;
 }
 
@@ -43,7 +48,7 @@ p {
 }
 
 * figure {
-  margin-bottom:0.5em 0;
+  margin-bottom:0.5rem 0;
 }
 
 /*-------------GRID SET-UP-------------*/
@@ -73,7 +78,7 @@ header {
 }
 
 header a {
-  padding: 1rem 0;
+  padding: 1.5rem 0;
   width: 100%;
   height: 100%;
 }
@@ -87,7 +92,7 @@ footer {
 }
 
 .footer-link {
-  padding: 30px 0;
+  padding: 2rem 0;
   width: 90px;
   margin: 10px;
   text-align: center;
@@ -98,29 +103,17 @@ footer {
   background-color: #b8ff71;
 }
 
-/*-------------ARTICLE STYLING-------------*/
-
-main p {
-  text-align: center;
-}
-
-article {
-  margin: auto;
-  width: 90%;
-  padding: 1em;
-  max-width: 550px;
-}
-
-/*-------------NAVBAR SETTINGS FOR EVERY PAGE-------------*/
+/*-------------NAVBAR FLEX + DIMENSIONS + COLOURS + GRID AREAS-------------*/
 .nav-bar-container {
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }
 
 .nav-bar-container a {
-  padding: 3em 0;
+  padding: 3rem 0;
   width: 100%;
   height: 100%;
 }
@@ -136,7 +129,7 @@ article {
 }
 
 #about-me-link {
-  background: white;
+  background: rgb(230, 230, 230);
   grid-area: about-me;
 }
 
@@ -151,7 +144,7 @@ article {
 }
 
 
-/*-------------NAVBAR -> CONTACT PAGE-------------*/
+/*-------------NAVBAR GRID ORDERING PER PAGE-------------*/
 #contact-page-nav {
   display: grid;
   grid-template-areas:
@@ -160,7 +153,6 @@ article {
   grid-template-columns: 1fr 1fr;
 }
 
-/*-------------NAVBAR -> BLOG-INDEX-------------*/
 #blog-index-page-nav {
   display: grid;
   grid-template-areas:
@@ -169,7 +161,6 @@ article {
     "about-me";
 }
 
-/*-------------NAVBAR -> BLOG-POSTS-------------*/
 .blog-post-nav {
   display: grid;
   grid-template-areas:
@@ -179,7 +170,6 @@ article {
     "about-me";
 }
 
-/*-------------NAVBAR -> ABOUT-ME-------------*/
 #about-me-nav {
   display: grid;
   grid-template-areas:
@@ -189,7 +179,6 @@ article {
     "blog-index";
 }
 
-/*-------------NAVBAR -> MY-WORK-------------*/
 #my-work-nav {
   display: grid;
   grid-template-areas:
@@ -200,9 +189,9 @@ article {
 }
 
 /*-------------INDEX.HTML-------------*/
-#home-page-pic {
-  width: 30vw;
-  height: 30vw;
+.portrait-pic {
+  width: 60vw;
+  height: 60vw;
   object-fit: cover;
   object-position: 0 20%;
   margin: auto
@@ -227,43 +216,10 @@ body {
   "footer"
 }
 
-@media screen and (min-width: 700px) { 
-    body {    
-    grid-template-columns: 1fr 3fr;
-    
-    grid-template-areas:
-    "header header"
-    "nav main"  
-    "footer footer"
-  }
-}
-
-@media screen and (min-width: 900px) and (min-height: 600px) and (min-aspect-ratio: 1.5/1) {
-  nav {
-    position: sticky;
-    align-self: start;
-    margin-top: 5vh;
-    top: 0
-    }
-
-    .nav-bar-container a {
-      padding: 7vh 0;
-    }  
-  
-    main {    
-    grid-template-columns: 1fr 3fr;
-
-    grid-template-areas:
-    "header header"
-    "nav main"  
-    "footer footer"
-  }
-}
-
 /*-------------CONTACT.HTML-------------*/
 .div-link-button {
   text-align: center;
-  margin: 0.5em 30%;
+  margin: 0.5rem 30%;
   padding: 2em 0;
 }
 
@@ -285,7 +241,7 @@ body {
 
 .single-blog-container {
   max-width: 400px;
-  margin: 1.5em 0;
+  margin: 1.5rem 0;
   background-color: #5e99ff;
   padding: 1.5em;
   border-radius: 5%;
@@ -294,7 +250,7 @@ body {
 .single-blog-container h2,
 h3,
 p {
-  margin: 0.2em 0;
+  margin: 0.2rem 0;
   text-align: left;
 }
 
@@ -303,10 +259,6 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-.blog-post img {
-  width: 80%;
 }
 
 .blog-post figcaption {
@@ -323,13 +275,9 @@ p {
 #about-me-article p {
     text-align: center;
 }
-  
 
-#about-me-article img {
-  width: 30vh;
-  height: 30vh;
-  object-fit: cover;
-  object-position: 0 5%;
+#about-me-portrait {
+  object-position: 0 15%;
 }
 
 /*-------------MY-WORK.HTML-------------*/
@@ -356,3 +304,76 @@ p {
   width: 70%;
 }
 
+/*-------------MEDIA QUERIES-------------*/
+article {
+  margin: auto;
+  width: 90%;
+  padding: 1rem;
+  max-width: 550px;
+}
+
+
+@media screen and (min-width: 700px) and  (min-aspect-ratio: 0.9/1) { 
+  body {    
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas:
+    "header header"
+    "nav main"
+    ". main"  
+    "footer footer"
+  }
+  .nav-bar-container a {
+      padding: 7vh 0;
+      font-size: 1.3rem;
+      } 
+
+* h1 {
+  font-size: 3rem; 
+}
+
+* h2 {
+  font-size: 2rem;
+}
+
+* p {
+  font-size: 1.3rem;
+}
+
+article {
+  max-width: 800px;
+}
+
+.portrait-pic {
+  width: 40vw;
+  height: 40vw;
+}
+
+}
+
+
+@media screen and (min-width: 900px) and (min-height: 600px) and (min-aspect-ratio: 1.5/1) {
+nav {
+  position: sticky;
+  align-self: start;
+  margin-top: 5vh;
+  top: 0
+  }
+
+.nav-bar-container a {
+  padding: 6vh 0;
+  } 
+   
+main {    
+  grid-template-columns: 1fr 3fr;
+  grid-template-areas:
+    "header header"
+    "nav main"  
+    "footer footer"
+  }     
+
+  .portrait-pic {
+    padding-top: 1vh;
+    width: 25vw;
+    height: 25vw;
+  }
+}
