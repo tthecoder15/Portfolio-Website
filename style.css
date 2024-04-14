@@ -24,8 +24,8 @@
 }
 
 * figure {
-  margin-bottom: 0.5rem 0;
-  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
 }
 
 main h1,
@@ -34,10 +34,13 @@ p {
   text-align: center;
 }
 
+main p {
+  margin-top: 0.5rem;
+}
+
 main h1,
 em {
   font-size: 2rem;
-  margin-top: 1rem;
   padding-top: 1rem 0;
   font-weight: bold;
 }
@@ -45,7 +48,6 @@ em {
 main h2 {
   font-size: 1.5rem;
   font-weight: bold;
-  margin-top: 1.5rem;
 }
 
 main h3 {
@@ -115,14 +117,6 @@ footer {
   flex-wrap: wrap;
 }
 
-/* .footer-link {
-  padding: 2rem 0;
-  width: 90px;
-  margin: 10px;
-  text-align: center;
-  background-color: yellow;
-} */
-
 footer img {
   width: 60px;
   margin: 10px;
@@ -133,7 +127,6 @@ footer img {
   font-size: 45px;
   margin: 0;
   padding: 0;
-  
 }
 
 /*-------------NAVBAR FLEX + DIMENSIONS + COLOURS + GRID AREAS-------------*/
@@ -227,10 +220,10 @@ footer img {
   object-fit: cover;
   object-position: 0 20%;
   margin: auto;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
-#home-page-body h1 {
+#home-page-main h1 {
   margin-top: 0;
 }
 
@@ -258,6 +251,7 @@ body {
   text-align: center;
   margin: 0.5rem 30%;
   padding: 2em 0;
+  transition: 1.2s;
 }
 
 #linkedin-link-button {
@@ -301,12 +295,6 @@ body {
 }
 
 /*-------------BLOG-#.HTML-------------*/
-.blog-post {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
 .blog-post figcaption {
   margin: 1em 0;
 }
@@ -322,19 +310,10 @@ body {
 
 .blog-post h3 {
   text-align: start;
+  font-weight: bold;
 }
 
 /*-------------ABOUT-ME.HTML-------------*/
-#about-me-article {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-#about-me-article p {
-  text-align: center;
-}
-
 #about-me-portrait {
   object-position: 0 15%;
 }
@@ -344,10 +323,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-.my-work-article:nth-of-type(even) {
-  background-color: #fc5656;
+  margin-bottom: 0;
 }
 
 .my-work-article img {
@@ -366,12 +342,17 @@ h3 {
 
 /*-------------INTERACTIVITY-------------*/
 nav a:hover {
-    background-color: #b8ff71;
-    font-weight: bold;
+  background-color: #b8ff71;
+  font-weight: bold;
+}
+
+.div-link-button:hover {
+  transform: scale(1.1);
+  font-weight: bold;
 }
 
 .single-blog-container:hover {
-  transform: scale(1.05)
+  transform: scale(1.05);
 }
 
 /*-------------MEDIA QUERIES-------------*/
@@ -450,7 +431,6 @@ article {
   }
 
   .portrait-pic {
-    padding-top: 1vh;
     width: 25vw;
     height: 25vw;
   }
