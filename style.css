@@ -1,3 +1,5 @@
+/* Generic Styling */
+
 * {
   margin: 0;
   border: 0;
@@ -70,7 +72,8 @@ main figcaption {
   margin-top: 1rem;
 }
 
-/*-------------GRID SET-UP-------------*/
+/* Main Grid-Areas */
+
 * header {
   grid-area: header;
 }
@@ -87,7 +90,8 @@ main figcaption {
   grid-area: main;
 }
 
-/*-------------HEADER-------------*/
+/* Text Component 1 - Header (featured on all pages)*/
+
 header {
   text-align: center;
   background-color: #b8ff71;
@@ -117,6 +121,8 @@ footer {
   flex-wrap: wrap;
 }
 
+/* Graphical Component 2 Github + LinkedIn Logos (featured on all pages) */
+
 footer img {
   width: 60px;
   margin: 10px;
@@ -129,7 +135,8 @@ footer img {
   padding: 0;
 }
 
-/*-------------NAVBAR FLEX + DIMENSIONS + COLOURS + GRID AREAS-------------*/
+/* Text Component 3 - Nav Bar (featured on all pages, changed order on all pages)*/
+
 .nav-bar-container {
   text-align: center;
   display: flex;
@@ -169,7 +176,6 @@ footer img {
   grid-area: download-resume;
 }
 
-/*-------------NAVBAR GRID ORDERING PER PAGE-------------*/
 #contact-page-nav {
   display: grid;
   grid-template-areas:
@@ -213,7 +219,10 @@ footer img {
   grid-template-columns: 1fr 1fr;
 }
 
-/*-------------INDEX.HTML-------------*/
+/* index.html */
+
+/* Graphical Component 1 - .portrait-pic (featured on index.html + about-me.html)*/
+
 .portrait-pic {
   width: 60vw;
   height: 60vw;
@@ -246,7 +255,7 @@ body {
     "footer";
 }
 
-/*-------------CONTACT.HTML-------------*/
+/* contact.html */
 .div-link-button {
   text-align: center;
   margin: 0.5rem 30%;
@@ -267,7 +276,8 @@ body {
   margin-bottom: 5vh;
 }
 
-/*-------------BLOG-INDEX.HTML-------------*/
+/* blog-index.html */
+
 #blog-index-container {
   display: flex;
   flex-direction: column;
@@ -284,6 +294,8 @@ body {
   text-align: start;
 }
 
+/* Text Component 4 - .single-blog-containers (featured on blog-index.html) */
+
 .single-blog-container {
   max-width: 500px;
   margin: 1.5rem 0;
@@ -294,7 +306,10 @@ body {
   transition: 1.5s;
 }
 
-/*-------------BLOG-#.HTML-------------*/
+/* blog-#.html */
+
+/* Graphical Component 4 - .blog-post img + figcaption (featured on blog-#.html)*/
+
 .blog-post figcaption {
   margin: 1em 0;
 }
@@ -313,18 +328,22 @@ body {
   font-weight: bold;
 }
 
-/*-------------ABOUT-ME.HTML-------------*/
+/* about-me.html */
 #about-me-portrait {
   object-position: 0 15%;
 }
 
-/*-------------MY-WORK.HTML-------------*/
+/* my-work.html */
+
+/* Graphical Component 3 - My Work Article + Figure (featured on my-work.html)*/
+
 .my-work-article {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-bottom: 0;
 }
+
 
 .my-work-article img {
   width: 95%;
@@ -340,7 +359,7 @@ h3 {
   width: 70%;
 }
 
-/*-------------INTERACTIVITY-------------*/
+/* interactive animations */
 nav a:hover {
   background-color: #b8ff71;
   font-weight: bold;
@@ -355,7 +374,8 @@ nav a:hover {
   transform: scale(1.05);
 }
 
-/*-------------MEDIA QUERIES-------------*/
+/* Text Component 2 - Reusable Article Dimensions (featured on all pages) */
+
 article {
   margin: auto;
   width: 90%;
