@@ -17,13 +17,16 @@ main p {
 
 * h1 {
   font-size: 2rem;
-  margin: 0.3em 0;
+  margin-top: 1rem;
+  padding: 1rem 0;
 }
 
 * h2 {
   font-size: 1.5rem;
-  margin-top: 0.3rem;
-  margin-bottom: 0.3rem;
+}
+
+* h3 {
+  margin: 0.5rem;
 }
 
 * a {
@@ -33,8 +36,7 @@ main p {
 
 * figcaption {
   font-style: italic;
-  text-align: center;
-  padding-top: 0.5rem;
+  text-align: center; 
   margin: auto;
 }
 
@@ -49,6 +51,7 @@ main p {
 
 * figure {
   margin-bottom:0.5rem 0;
+  margin-top: 0.5rem;
 }
 
 /*-------------GRID SET-UP-------------*/
@@ -116,6 +119,7 @@ footer {
   padding: 3rem 0;
   width: 100%;
   height: 100%;
+  font-size: 1.2rem;
 }
 
 #my-work-link {
@@ -239,20 +243,23 @@ body {
   align-items: center;
 }
 
+#blog-index-container h3 {
+  text-align: start;
+}
+
 .single-blog-container {
-  max-width: 400px;
+  max-width: 500px;
   margin: 1.5rem 0;
   background-color: #5e99ff;
   padding: 1.5em;
   border-radius: 5%;
 }
 
-.single-blog-container h2,
-h3,
-p {
-  margin: 0.2rem 0;
-  text-align: left;
+.single-blog-container {
+  margin: 1rem 0;
 }
+
+
 
 /*-------------BLOG-#.HTML-------------*/
 .blog-post {
@@ -263,6 +270,19 @@ p {
 
 .blog-post figcaption {
   margin: 1em 0;
+}
+
+.blog-post img {
+  width: 80%;
+  margin-top: 1rem;
+}
+
+.blog-post p {
+  text-align: start;
+}
+
+.blog-post h3 {
+  text-align: start;
 }
 
 /*-------------ABOUT-ME.HTML-------------*/
@@ -310,6 +330,7 @@ article {
   width: 90%;
   padding: 1rem;
   max-width: 550px;
+  margin-bottom: 1em;
 }
 
 
@@ -335,7 +356,7 @@ article {
   font-size: 2rem;
 }
 
-* p {
+* p, figcaption {
   font-size: 1.3rem;
 }
 

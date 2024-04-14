@@ -38,4 +38,3 @@ Sitemap
 Wireframe/mockups of each page
 
 List of components and styling (and how they will engage the audience)
-
