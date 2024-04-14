@@ -11,6 +11,7 @@
 * a {
   text-decoration: none;
   color: black;
+  transition: 1.2s;
 }
 
 * img {
@@ -28,11 +29,13 @@
 }
 
 main h1,
-h2, p {
+h2,
+p {
   text-align: center;
 }
 
-main h1, em {
+main h1,
+em {
   font-size: 2rem;
   margin-top: 1rem;
   padding-top: 1rem 0;
@@ -50,7 +53,8 @@ main h3 {
   margin-bottom: 0.5rem;
 }
 
-main p, figcaption {
+main p,
+figcaption {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -59,7 +63,7 @@ main p, figcaption {
 
 main figcaption {
   font-style: italic;
-  text-align: center; 
+  text-align: center;
   margin: auto;
   margin-top: 1rem;
 }
@@ -88,7 +92,6 @@ header {
   margin-bottom: 0rem;
   display: flex;
   justify-content: center;
-  
 }
 
 header a {
@@ -104,7 +107,6 @@ header h2 {
   font-size: 3rem;
 }
 
-
 /*-------------FOOTER-------------*/
 footer {
   background-color: #b8ff71;
@@ -113,16 +115,25 @@ footer {
   flex-wrap: wrap;
 }
 
-.footer-link {
+/* .footer-link {
   padding: 2rem 0;
   width: 90px;
   margin: 10px;
   text-align: center;
   background-color: yellow;
+} */
+
+footer img {
+  width: 60px;
+  margin: 10px;
+  transform: none;
 }
 
-#ws-extra-green {
-  background-color: #b8ff71;
+#footer-house-logo {
+  font-size: 45px;
+  margin: 0;
+  padding: 0;
+  
 }
 
 /*-------------NAVBAR FLEX + DIMENSIONS + COLOURS + GRID AREAS-------------*/
@@ -131,7 +142,6 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  
 }
 
 .nav-bar-container a {
@@ -162,10 +172,9 @@ footer {
 }
 
 #download-resume-nav-link {
-  background: #FFFF70;
+  background: #ffff70;
   grid-area: download-resume;
 }
-
 
 /*-------------NAVBAR GRID ORDERING PER PAGE-------------*/
 #contact-page-nav {
@@ -237,11 +246,11 @@ footer {
 body {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-areas: 
-  "header"
-  "main"
-  "nav"
-  "footer"
+  grid-template-areas:
+    "header"
+    "main"
+    "nav"
+    "footer";
 }
 
 /*-------------CONTACT.HTML-------------*/
@@ -257,6 +266,11 @@ body {
 
 #resume-link-button {
   background-color: #ffff70;
+}
+
+#contact-main {
+  margin-top: 2vh;
+  margin-bottom: 5vh;
 }
 
 /*-------------BLOG-INDEX.HTML-------------*/
@@ -283,6 +297,7 @@ body {
   padding: 2rem;
   padding-top: 0.7rem;
   border-radius: 5%;
+  transition: 1.5s;
 }
 
 /*-------------BLOG-#.HTML-------------*/
@@ -317,7 +332,7 @@ body {
 }
 
 #about-me-article p {
-    text-align: center;
+  text-align: center;
 }
 
 #about-me-portrait {
@@ -339,13 +354,24 @@ body {
   width: 95%;
 }
 
-.my-work-article h2, h3 {
+.my-work-article h2,
+h3 {
   text-align: center;
-  margin-left: 0
+  margin-left: 0;
 }
 
 #band-website-vertical {
   width: 70%;
+}
+
+/*-------------INTERACTIVITY-------------*/
+nav a:hover {
+    background-color: #b8ff71;
+    font-weight: bold;
+}
+
+.single-blog-container:hover {
+  transform: scale(1.05)
 }
 
 /*-------------MEDIA QUERIES-------------*/
@@ -357,72 +383,71 @@ article {
   margin-bottom: 1em;
 }
 
-
-@media screen and (min-width: 700px) and  (min-aspect-ratio: 0.9/1) { 
-  body {    
+@media screen and (min-width: 700px) and (min-aspect-ratio: 0.9/1) {
+  body {
     grid-template-columns: 1fr 3fr;
     grid-template-areas:
-    "header header"
-    "nav main"
-    ". main"  
-    "footer footer"
+      "header header"
+      "nav main"
+      ". main"
+      "footer footer";
   }
   .nav-bar-container a {
-      padding: 7vh 0;
-      font-size: 1.3rem;
-      } 
-
-main h1, em {
-  font-size: 2.5rem;
-   
-}
-
-main h2 {
-  font-size: 2rem;
-}
-
-h3 {
-  font-size: 1.7rem;
-}
-
-main p, figcaption {
-  font-size: 1.3rem;
-}
-
-article {
-  max-width: 700px;
-}
-
-.portrait-pic {
-  width: 40vw;
-  height: 40vw;
-}
-
-header h2 {
-  font-size: 3rem
-}
-}
-
-
-@media screen and (min-width: 900px) and (min-height: 600px) and (min-aspect-ratio: 1.5/1) {
-nav {
-  position: sticky;
-  align-self: start;
-  margin-top: 5vh;
-  top: 0
+    padding: 7vh 0;
+    font-size: 1.3rem;
   }
 
-.nav-bar-container a {
-  padding: 6vh 0;
-  } 
-   
-main {    
-  grid-template-columns: 1fr 3fr;
-  grid-template-areas:
-    "header header"
-    "nav main"  
-    "footer footer"
-  }     
+  main h1,
+  em {
+    font-size: 2.5rem;
+  }
+
+  main h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.7rem;
+  }
+
+  main p,
+  figcaption {
+    font-size: 1.3rem;
+  }
+
+  article {
+    max-width: 700px;
+  }
+
+  .portrait-pic {
+    width: 40vw;
+    height: 40vw;
+  }
+
+  header h2 {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (min-width: 900px) and (min-height: 600px) and (min-aspect-ratio: 1.5/1) {
+  nav {
+    position: sticky;
+    align-self: start;
+    margin-top: 5vh;
+    top: 0;
+  }
+
+  .nav-bar-container a {
+    padding: 6vh 0;
+  }
+
+  main {
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas:
+      "header header"
+      "nav main"
+      "footer footer";
+  }
 
   .portrait-pic {
     padding-top: 1vh;
